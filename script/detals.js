@@ -4,7 +4,6 @@ import { loadResurse } from "./main.js";
 // функция создания DOM-элементов страницы с деталями
 
 export  function render(data){
-  console.log("детали" , data)
 
   const container = document.createElement('div');
   const filmTitle = document.createElement('h1');
@@ -40,7 +39,6 @@ export  function render(data){
       data.species,
       ].map(list => createInfoList(list))).then(([list1, list2,list3]) => {
 
-        console.log(list1)
         switch (colum.getAttribute("data-num")) {
           case "colum-1":
             infoListTitle.textContent = "Список героев"

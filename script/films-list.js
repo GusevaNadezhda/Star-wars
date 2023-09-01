@@ -30,7 +30,6 @@ export function render(data) {
     title.textContent = count + ':' + film.title;
 
     filmCard.addEventListener('click', async (e) => {
-      console.log(filmCard.id)
       e.preventDefault()
       window.addEventListener('popstate', () => { })
       history.pushState(null, '', `?filmId=${filmCard.id}`)
